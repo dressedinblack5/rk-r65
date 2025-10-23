@@ -1,12 +1,10 @@
 # Royal Kludge R65 firmware (Wired ISO variant)
 
-![Royal Kludge R65 Keyboard](via-r65.png)
-
 ## Overview
 
 The Royal Kludge RKR65 is a 66-key RGB backlit mechanical keyboard with Chartreuse, Brown, or Blue switches. It offers a gasket structure for a soft typing experience, knob volume adjustment, ergonomic design, hot-swappable keys and QMK support.
 
-I acquired this beauty from MercadoLibre, Argentina and sadly RK official site no longer provide a functional software, so I remapped both ISO key and RGB matrix layout based on QMK documentation. This batch seems not to provide VIA support, even Chromium based browsers manage to detect it (Firefox needs WebHID extension) and ```bash VIA_ENABLE = yes``` entry is set in rules.mk. 
+I acquired this beauty from MercadoLibre, Argentina and sadly RK official site no longer provide a functional software, so I remapped both ISO key and RGB matrix layout based on QMK documentation. This batch seems not to provide VIA support, although Chromium based browsers manage to detect it (Firefox needs WebHID extension) and ```bash VIA_ENABLE = yes``` entry is set in rules.mk. 
 
 Special thanks to @sdk66 for sharing the initial firmware files, @irfanjmdn and @iamdanielv for fixing a major portion of the code. QMK of course!
 
@@ -28,7 +26,7 @@ Special thanks to @sdk66 for sharing the initial firmware files, @irfanjmdn and 
    A folder will be installed at `C:/Users/%USERNAME%/qmk_firmware`.
 
 3. **Add Keyboard Files**  
-   [Download this repository](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/irfanjmdn/r65/tree/master/rk/r65) and move the `rk/r65` folder into your `qmk_firmware/keyboards/` folder.
+   Download this repository and move the `rk/r65` folder into your `qmk_firmware/keyboards/` folder.
 
 ### > Compiling Firmware
 
@@ -47,7 +45,7 @@ Special thanks to @sdk66 for sharing the initial firmware files, @irfanjmdn and 
    Download and install [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases).
 
 2. **Load the Firmware File**  
-   Open QMK Toolbox as Admin and load the `.bin` file.
+   Open QMK Toolbox with Admin privileges and load the `.bin` file.
 
 3. **Enter Bootloader Mode**  
    Reset the keyboard into bootloader mode.

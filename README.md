@@ -27,7 +27,7 @@ Special thanks to @sdk66 for sharing the initial firmware files, @NieblaDev and 
    A folder will be installed at `C:/Users/%USERNAME%/qmk_firmware`.
 
 3. **Add Keyboard Files**  
-   Download this repository and move the `rk/r65` folder into your `qmk_firmware/keyboards/` folder.
+   Download this repository and place the `rk/r65` folder into your `qmk_firmware/keyboards/` folder.
 
 ### > Compiling Firmware
 
@@ -36,6 +36,7 @@ Special thanks to @sdk66 for sharing the initial firmware files, @NieblaDev and 
    ```bash
    qmk compile -j 0 -kb r65 -km iso
    ```
+   *Note ```-j 0``` speeds up the job by enabling parallel threads.
    
 2. **Locate the Firmware File**  
    Find the compiled `.bin` file in the root of the `qmk_firmware` folder.

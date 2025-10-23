@@ -1,5 +1,5 @@
 /*
-    Copyright 2024 ND (@NieblaDev)
+    Copyright 2025 ND (@dressedinblack5)
     SPDX-License-Identifier: GPL-2.0-or-later
 
     This is a keymap for the ISO version of the RK65 keyboard.

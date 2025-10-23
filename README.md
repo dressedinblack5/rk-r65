@@ -4,9 +4,9 @@
 
 The Royal Kludge RKR65 is a 66-key RGB backlit mechanical keyboard with Chartreuse, Brown, or Blue switches. It offers a gasket structure for a soft typing experience, knob volume adjustment, ergonomic design, hot-swappable keys and QMK support.
 
-I acquired this beauty from MercadoLibre, Argentina and sadly RK official site no longer provide a functional software, so I remapped both ISO key and RGB matrix layout based on QMK documentation. This batch seems not to provide VIA support, although Chromium based browsers manage to detect it (Firefox needs WebHID extension) and ```bash VIA_ENABLE = yes``` entry is set in rules.mk. 
+I acquired this beauty from MercadoLibre, Argentina and sadly RK official site no longer provide a functional software, so I remapped both ISO key and RGB matrix layout based on QMK documentation. This batch seems not to provide VIA support, although Chromium based browsers manage to detect it (Firefox needs WebHID extension) and ```VIA_ENABLE = yes``` entry is set in rules.mk. 
 
-Special thanks to @sdk66 for sharing the initial firmware files, @irfanjmdn and @iamdanielv for fixing a major portion of the code. QMK of course!
+Special thanks to @sdk66 for sharing the initial firmware files, @NieblaDev and @iamdanielv for fixing a major portion of the code. QMK of course!
 
 > [IMPORTANT!] 
 > This branch only contains files for the **wired ISO-layout** version of the Royal Kludge R65.
@@ -45,10 +45,10 @@ Special thanks to @sdk66 for sharing the initial firmware files, @irfanjmdn and 
    Download and install [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases).
 
 2. **Load the Firmware File**  
-   Open QMK Toolbox with Admin privileges and load the `.bin` file.
+   Open QMK Toolbox as Admin and load the `.bin` file.
 
 3. **Enter Bootloader Mode**  
-   Reset the keyboard into bootloader mode.
+   Reset the keyboard into bootloader mode. (Procedure below)
 
 4. **Flash the Firmware**  
    Click 'Flash', then 'Exit DFU' once the flashing process is complete.

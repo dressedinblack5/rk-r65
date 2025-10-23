@@ -41,7 +41,7 @@ Special thanks to @sdk66 for sharing the initial firmware files, @irfanjmdn and 
 2. **Locate the Firmware File**  
    Find the compiled `.bin` file in the root of the `qmk_firmware` folder.
 
-### > Flashing/Installing the Firmware
+### > Flashing Firmware
 
 1. **Install QMK Toolbox**  
    Download and install [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases).

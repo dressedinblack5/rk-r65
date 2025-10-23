@@ -4,11 +4,11 @@
 
 The Royal Kludge RKR65 is a 66-key RGB backlit mechanical keyboard with Chartreuse, Brown, or Blue switches. It offers a gasket structure for a soft typing experience, knob volume adjustment, ergonomic design, hot-swappable keys and QMK support.
 
-I acquired this beauty from MercadoLibre, Argentina and sadly RK official site no longer provide a functional software, so I remapped both ISO key and RGB matrix layout based on QMK documentation. This batch seems not to provide VIA support, although Chromium based browsers manage to detect it (Firefox needs WebHID extension) and ```VIA_ENABLE = yes``` entry is set in rules.mk. 
+I acquired this beauty from MercadoLibre, Argentina and sadly RK official site no longer provide a functional software, so I remapped both ISO key and RGB matrix layout based on QMK documentation. This batch seems not to provide VIA support, although Chromium based browsers manage to detect it (Firefox needs WebHID extension installed) and ```VIA_ENABLE = yes``` entry is set in rules.mk. 
 
 Special thanks to @sdk66 for sharing the initial firmware files, @NieblaDev and @iamdanielv for fixing a major portion of the code. QMK of course!
 
-> [IMPORTANT!] 
+> [IMPORTANT] 
 > This branch only contains files for the **wired ISO-layout** version of the Royal Kludge R65.
 > **DO NOT** flash this firmware if your keyboard has wireless capabilities.
 > **DO NOT** flash this firmware if you're unsure of your keyboard's variant/don't know much about keyboard modification.
@@ -23,6 +23,7 @@ Special thanks to @sdk66 for sharing the initial firmware files, @NieblaDev and 
    ```bash
    qmk setup
    ```
+   It may ask for confirmation and take a few minutes depending on network.
    A folder will be installed at `C:/Users/%USERNAME%/qmk_firmware`.
 
 3. **Add Keyboard Files**  

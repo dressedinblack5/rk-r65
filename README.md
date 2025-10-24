@@ -5,7 +5,7 @@
 The Royal Kludge R65 is a 66-key RGB backlit mechanical keyboard with Chartreuse, Brown, or Blue switches. It offers a gasket structure for a soft typing experience, knob volume adjustment, ergonomic design, hot-swappable keys and QMK support.
 
 Briefly.
-I just acquired this beauty from MercadoLibre and sadly noticed RK official site no longer maintain a functional software, since @sdk66 BROKE MY KIKI i angry, so I remapped both ISO and RGB matrix layout based on updated QMK documentation. 
+I just acquired this beauty from MercadoLibre and sadly noticed RK official site no longer maintain a functional software, since @sdk66 remained outdated, so I remapped both ISO and RGB matrix layout based on recent QMK documentation. 
 
 This batch also seems not to provide VIA, VIAL, kanata (Linux), RK software support, although Chromium based browsers manage to detect it (Firefox needs WebHID extension installed) and ```VIA_ENABLE = yes``` entry is set in rules.mk. Old batchs, yes!
 

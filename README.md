@@ -4,12 +4,12 @@
 
 The Royal Kludge R65 is a 66-key RGB backlit mechanical keyboard with Chartreuse, Brown, or Blue switches. It offers a gasket structure for a soft typing experience, knob volume adjustment, ergonomic design, hot-swappable keys and QMK support.
 
-I acquired this beauty from MercadoLibre and sadly RK official site no longer provide a functional software, so I remapped both ISO key and RGB matrix layout based on QMK documentation. This batch also seems not to provide VIA support, although Chromium based browsers manage to detect it (Firefox needs WebHID extension installed) and ```VIA_ENABLE = yes``` entry is set in rules.mk.
+I acquired this beauty from MercadoLibre and sadly RK official site no longer provide a functional software, so I remapped both ISO and RGB matrix layout based on QMK documentation. This batch also seems not to provide VIA, VIAL, kanata (Linux), RK software support, although Chromium based browsers manage to detect it (Firefox needs WebHID extension installed) and ```VIA_ENABLE = yes``` entry is set in rules.mk.
 This version corresponds to 342d:e480 device, most likely lastest Latinoamerican vendor releases this year AFAIK.
 
-*Major changes are subject to keycodes Deprecation Notices made by QMK as they mention on 11/2024 changelog and RGB matrix remap for assigning leds to respective keys. You are always encouraged to visit their [site](https://docs.qmk.fm/) for further customizing.*
+*Major changes are subject to keycodes Deprecation Notices made by QMK as they mention on 11/2024 changelog and RGB matrix remap for assigning leds to respective keys. You are always encouraged to visit their [site](https://docs.qmk.fm/) for further customizing. Also you can always use this firmware as a rollback as long as it contains default settings with funtional knob, state leds, Mac layout, all 43 stock defined RGB animations properly working.*
 
-Special thanks to @sdk66 for sharing the initial firmware files, @NieblaDev and @iamdanielv for fixing a major portion of the code. QMK of course!
+Special thanks to @sdk66 for sharing the initial firmware files, @NieblaDev and @iamdanielv for fixing a major portion of the code. @qmk of course!
 
 > [IMPORTANT] 
 > This branch only contains files for the **wired ISO-layout** version of the Royal Kludge R65.

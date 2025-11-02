@@ -7,11 +7,11 @@
 The Royal Kludge R65 is a 66-key RGB backlit mechanical keyboard with Chartreuse, Brown, or Blue switches. It offers a gasket structure for a soft typing experience, knob volume adjustment, ergonomic design, hot-swappable keys and QMK support.
 
 Briefly.
-I just acquired this beauty from MercadoLibre.com.ar and sadly noticed RK official site no longer maintain a functional software, since @sdk66's BROKE MY KIBI I decided to remap both ISO and RGB matrix layout based on recent QMK documentation. 
+I just acquired this beauty from MercadoLibre.com.ar and sadly noticed RK no longer maintain a functional software, since @sdk66's BROKE MY KIBI I decided to remap both ISO and RGB matrix layout based on recent QMK documentation. 
 
-This version relates to 342d:e480 device, most likely lastest Latinoamerican releases this year AFAIK.
+This version relates to 342d:e480 device, most likely lastest Latinoamerican/International releases this year AFAIK.
 
-This "batch" also seems not to support VIA, VIAL, SOCD, OpenRGB, SignalRGB, eruption (Linux), kanata (Linux), RK official software anymore, (although Chromium based browsers manage to detect it (Firefox needs WebHID extension installed) and ```WHATEVER_ENABLE = yes``` is set in rules.mk, IT JUST DOESN'T WORK! Please, read this [#issue](https://github.com/qmk/qmk_firmware/issues/24085).
+This "batch" also seems not to support VIA, VIAL, SOCD, OpenRGB, SignalRGB, eruption (Linux), kanata (Linux), RK official software anymore, (although Chromium based browsers manage to detect it (Firefox needs WebHID extension installed) and ```WHATEVER_ENABLE = yes``` is set in rules.mk), IT JUST DOESN'T WORK! Please, read this [#issue](https://github.com/qmk/qmk_firmware/issues/24085).
 
 *Major efforts are subject to keycode Deprecation Notices made by QMK as they mention on 11/2024 changelog, and RGB matrix layout fix to respective keys/values. You are always encouraged to visit [QKM Docs](https://docs.qmk.fm/) for further modding. Also you can always use this firmware as a rollback point, as long as it contains stock settings with funtional knob, state leds, Mac layout and all 43 defined RGB animations working properly.*
 

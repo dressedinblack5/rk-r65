@@ -9,7 +9,7 @@ I just acquired this beauty from MercadoLibre.com.ar and sadly noticed RK offici
 
 This version relates to VID:PID 342d:e480 device, most likely lastest Latinoamerican releases this year AFAIK.
 
-This batch also seems not to provide VIA, VIAL, kanata (Linux), RK software support, although Chromium based browsers manage to detect it (Firefox needs WebHID extension installed) and ```VIA_ENABLE = yes``` entry is set in rules.mk. Old batchs, yes!
+This batch also seems not to provide VIA, VIAL, kanata (Linux), RK support, although Chromium based browsers manage to detect it (Firefox needs WebHID extension installed) and ```VIA_ENABLE = yes``` entry is set in rules.mk, it DOESN'T WORK ANYMORE!
 
 *Major efforts are subject to keycode Deprecation Notices made by QMK as they mention on 11/2024 changelog and RGB matrix rendering leds to respective keys/values. You are always encouraged to visit their [site](https://docs.qmk.fm/) for further customizing. Also you can always use this firmware as a rollback point, as long as it contains stock settings for funtional knob, state leds, Mac layout and all 43 defined RGB animations working properly.*
 

@@ -1,5 +1,7 @@
 # Royal Kludge R65 firmware (Wired ISO version)
 
+![Royal Kludge R65 Keyboard](r65.jpg)
+
 ## Overview
 
 The Royal Kludge R65 is a 66-key RGB backlit mechanical keyboard with Chartreuse, Brown, or Blue switches. It offers a gasket structure for a soft typing experience, knob volume adjustment, ergonomic design, hot-swappable keys and QMK support.

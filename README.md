@@ -10,7 +10,7 @@ Note: Recent vendor tooling for this model appears to be nonfunctional, since or
 
 This branch targets 342d:e480 USB devices, most likely the latest Latin American/International releases this year AFAIK.
 
-In addition, it also seems not to support VIA, VIAL, SOCD, OpenRGB, SignalRGB, eruption (Linux), kanata (Linux), RK official software anymore and ```WHATEVER_ENABLE = yes``` is set in rules.mk), IT JUST DOESN'T WORK! Please, read this [#issue](https://github.com/qmk/qmk_firmware/issues/24085).
+In addition, it also seems not to support VIA, VIAL, SOCD, OpenRGB, SignalRGB, eruption (Linux), kanata (Linux), RK official software anymore or ```WHATEVER_ENABLE = yes``` is set in rules.mk), IT JUST DOESN'T WORK! Please, read this [#issue](https://github.com/qmk/qmk_firmware/issues/24085).
 
 *Major efforts are subject to keycode Deprecation Notices made by QMK as they mention on 11/2024 changelog, and RGB matrix layout fix to respective keys/values. You are always encouraged to visit [QKM Docs](https://docs.qmk.fm/) for further modding. Also you can always use the first release as a rollback point, as long as it contains stock settings with funtional knob, state leds, Mac layout and all 43 defined RGB animations working properly*
 

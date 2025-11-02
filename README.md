@@ -1,6 +1,6 @@
 # Royal Kludge R65 firmware (Wired ISO version)
 
-![Royal Kludge R65 Keyboard](r65.jpg)
+![Royal Kludge R65 Keyboard](r65.png)
 
 ## Overview
 

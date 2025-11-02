@@ -84,9 +84,11 @@
         },
         "driver": "ws2812",
         "layout": [
+            // OK
             {"matrix": [4, 2], "x": 32, "y": 64, "flags": 4}, // RALT
             {"matrix": [4, 1], "x": 16, "y": 64, "flags": 4}, // WIN
             {"matrix": [4, 0], "x": 0, "y": 64, "flags": 4}, // LCTRL
+            // OK
             {"matrix": [3, 0], "x": 0, "y": 48, "flags": 4},
             {"matrix": [3, 1], "x": 16, "y": 48, "flags": 4},
             {"matrix": [3, 2], "x": 32, "y": 48, "flags": 4},
@@ -146,6 +148,7 @@
             {"matrix": [0, 2], "x": 32, "y": 0, "flags": 4},
             {"matrix": [0, 1], "x": 16, "y": 0, "flags": 4},
             {"matrix": [0, 0], "x": 0, "y": 0, "flags": 4},
+            // OK
             {"matrix": [1, 14], "x": 224, "y": 16, "flags": 4}, //DEL
             {"matrix": [2, 14], "x": 224, "y": 32, "flags": 4}, //PGUP
 

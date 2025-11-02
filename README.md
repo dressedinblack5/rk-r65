@@ -13,7 +13,7 @@ This "batch" also seems not to support VIA, VIAL, SOCD, OpenRGB, SignalRGB, erup
 
 *Major efforts are subject to keycode Deprecation Notices made by QMK as they mention on 11/2024 changelog, and RGB matrix layout fix to respective keys/values. You are always encouraged to visit [QKM Docs](https://docs.qmk.fm/) for further modding. Also you can always use this firmware as a rollback point, as long as it contains stock settings with funtional knob, state leds, Mac layout and all 43 defined RGB animations working properly.*
 
-Special thanks to @sdk66 for sharing the initial firmware files, @irfanjmdn, @NieblaDev and @iamdanielv colaboration for fixing a major portion of the code. @qmk of course!
+Special thanks to @sdk66 for sharing the initial firmware files and @irfanjmdn, @NieblaDev and @iamdanielv colaboration for fixing a major portion of the code. @qmk of course!
 
 > [IMPORTANT] 
 > This branch only contains files for the **wired ISO-layout** version of the Royal Kludge R65.

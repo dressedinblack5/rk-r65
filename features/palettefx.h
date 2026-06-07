@@ -31,18 +31,18 @@
 
 #pragma once
 
-#include <stdint.h>
 #include "color.h"
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /** Gets the color data for the selected palette. */
-const uint16_t* palettefx_get_palette_data(void);
+const uint16_t *palettefx_get_palette_data(void);
 
 /** Gets the color data for the ith palette. */
-const uint16_t* palettefx_get_palette_data_by_index(uint8_t i);
+const uint16_t *palettefx_get_palette_data_by_index(uint8_t i);
 
 /** Returns the number of palettes. */
 uint8_t palettefx_num_palettes(void);
@@ -59,7 +59,7 @@ uint8_t palettefx_num_palettes(void);
  * @param x       Palette lookup position, a value in 0-255.
  * @return HSV color.
  */
-hsv_t palettefx_interp_color(const uint16_t* palette, uint8_t x);
+hsv_t palettefx_interp_color(const uint16_t *palette, uint8_t x);
 
 // The following enum constants may be used to refer to PaletteFx palettes by
 // name. To set a particular palette programmatically, do e.g.
@@ -73,70 +73,73 @@ hsv_t palettefx_interp_color(const uint16_t* palette, uint8_t x);
 // If you have defined additional palettes in palettefx_user.inc, they may be
 // referred to by `PALETTEFX_USER_0`, `PALETTEFX_USER_1`, etc.
 enum {
-#if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_AFTERBURN_ENABLE)
-    PALETTEFX_AFTERBURN,
+#if defined(PALETTEFX_ENABLE_ALL_PALETTES) ||                                  \
+    defined(PALETTEFX_AFTERBURN_ENABLE)
+  PALETTEFX_AFTERBURN,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_AMBER_ENABLE)
-    PALETTEFX_AMBER,
+  PALETTEFX_AMBER,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_BADWOLF_ENABLE)
-    PALETTEFX_BADWOLF,
+  PALETTEFX_BADWOLF,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_BOCA_ENABLE)
-    PALETTEFX_BOCA,
+  PALETTEFX_BOCA,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_CLASSIC_ENABLE)
-    PALETTEFX_CLASSIC,
+  PALETTEFX_CLASSIC,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_DRACULA_ENABLE)
-    PALETTEFX_DRACULA,
+  PALETTEFX_DRACULA,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_INFERNO_ENABLE)
-    PALETTEFX_INFERNO,
+  PALETTEFX_INFERNO,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_NOTPINK_ENABLE)
-    PALETTEFX_NOTPINK,
+  PALETTEFX_NOTPINK,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_PHOSPHOR_ENABLE)
-    PALETTEFX_PHOSPHOR,
+  PALETTEFX_PHOSPHOR,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_SUNSET_ENABLE)
-    PALETTEFX_SUNSET,
+  PALETTEFX_SUNSET,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_ROSEGOLD_ENABLE)
-    PALETTEFX_ROSEGOLD,
+  PALETTEFX_ROSEGOLD,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_SPORT_ENABLE)
-    PALETTEFX_SPORT,
+  PALETTEFX_SPORT,
 #endif
-#if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_SYNTHWAVE_ENABLE)
-    PALETTEFX_SYNTHWAVE,
+#if defined(PALETTEFX_ENABLE_ALL_PALETTES) ||                                  \
+    defined(PALETTEFX_SYNTHWAVE_ENABLE)
+  PALETTEFX_SYNTHWAVE,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_THERMAL_ENABLE)
-    PALETTEFX_THERMAL,
+  PALETTEFX_THERMAL,
 #endif
 #if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_VIRIDIS_ENABLE)
-    PALETTEFX_VIRIDIS,
+  PALETTEFX_VIRIDIS,
 #endif
-#if defined(PALETTEFX_ENABLE_ALL_PALETTES) || defined(PALETTEFX_WATERMELON_ENABLE)
-    PALETTEFX_WATERMELON,
+#if defined(PALETTEFX_ENABLE_ALL_PALETTES) ||                                  \
+    defined(PALETTEFX_WATERMELON_ENABLE)
+  PALETTEFX_WATERMELON,
 #endif
-    PALETTEFX_USER_0,
-    PALETTEFX_USER_1,
-    PALETTEFX_USER_2,
-    PALETTEFX_USER_3,
-    PALETTEFX_USER_4,
-    PALETTEFX_USER_5,
-    PALETTEFX_USER_6,
-    PALETTEFX_USER_7,
-    PALETTEFX_USER_8,
-    PALETTEFX_USER_9,
-    PALETTEFX_USER_10,
-    PALETTEFX_USER_11,
-    PALETTEFX_USER_12,
-    PALETTEFX_USER_13,
-    PALETTEFX_USER_14,
-    PALETTEFX_USER_15,
+  PALETTEFX_USER_0,
+  PALETTEFX_USER_1,
+  PALETTEFX_USER_2,
+  PALETTEFX_USER_3,
+  PALETTEFX_USER_4,
+  PALETTEFX_USER_5,
+  PALETTEFX_USER_6,
+  PALETTEFX_USER_7,
+  PALETTEFX_USER_8,
+  PALETTEFX_USER_9,
+  PALETTEFX_USER_10,
+  PALETTEFX_USER_11,
+  PALETTEFX_USER_12,
+  PALETTEFX_USER_13,
+  PALETTEFX_USER_14,
+  PALETTEFX_USER_15,
 };
 
 #ifdef __cplusplus

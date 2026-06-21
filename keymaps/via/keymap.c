@@ -8,6 +8,14 @@ enum layer_names {
   _BOOT,
 };
 
+void housekeeping_task_user(void) {
+  if (IS_LAYER_ON(_MAC) || IS_LAYER_ON(_MAC_FN)) {
+    gpio_write_pin_low(LED_MAC_PIN);
+  } else {
+    gpio_write_pin_high(LED_MAC_PIN);
+  }
+}
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_BASE] = LAYOUT(

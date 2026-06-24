@@ -15,6 +15,11 @@ This version relates to VID:PID 342d:e480 device, most likely lastest Latinoamer
 
 Special thanks to @sdk66 for sharing the initial firmware files, @NieblaDev and @iamdanielv colaboration for fixing a major portion of the code. @qmk of course!
 
+### > Changelog
+
+- **Boot animation**: Rainbow sweep on startup.
+- **PaletteFx effect**: Renamed "Gradient" to "Interference".
+
 > [IMPORTANT] 
 > This branch only contains files for the **wired ISO-layout** version of the Royal Kludge R65.
 > **DO NOT** flash this firmware if your keyboard has wireless capabilities.

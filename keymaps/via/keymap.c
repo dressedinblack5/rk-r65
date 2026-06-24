@@ -1,5 +1,28 @@
 #include QMK_KEYBOARD_H
 
+static void boot_anim(void) {
+  uint8_t mode = rgb_matrix_get_mode();
+  uint8_t hue  = rgb_matrix_get_hue();
+  uint8_t sat  = rgb_matrix_get_sat();
+  uint8_t val  = rgb_matrix_get_val();
+
+  rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
+
+  for (uint8_t i = 0; i < 36; i++) {
+    rgb_matrix_sethsv_noeeprom(i * 7, 255, val);
+    rgb_matrix_update_pwm_buffers();
+    wait_ms(40);
+  }
+
+  rgb_matrix_sethsv_noeeprom(hue, sat, val);
+  rgb_matrix_mode_noeeprom(mode);
+  rgb_matrix_update_pwm_buffers();
+}
+
+void keyboard_post_init_user(void) {
+  boot_anim();
+}
+
 enum layer_names {
     _BASE,
     _FN,

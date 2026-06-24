@@ -29,8 +29,8 @@
  * <https://getreuer.info/posts/keyboards/palettefx>
  */
 
- #if defined(PALETTEFX_ENABLE_ALL_EFFECTS) || defined(PALETTEFX_GRADIENT_ENABLE)
- RGB_MATRIX_EFFECT(PALETTEFX_GRADIENT)
+ #if defined(PALETTEFX_ENABLE_ALL_EFFECTS) || defined(PALETTEFX_INTERFERENCE_ENABLE)
+ RGB_MATRIX_EFFECT(PALETTEFX_INTERFERENCE)
  #endif
  #if defined(PALETTEFX_ENABLE_ALL_EFFECTS) || defined(PALETTEFX_FLOW_ENABLE)
  RGB_MATRIX_EFFECT(PALETTEFX_FLOW)
@@ -52,7 +52,7 @@
  #ifdef RGB_MATRIX_CUSTOM_EFFECT_IMPLS
 
  #if !(defined(PALETTEFX_ENABLE_ALL_EFFECTS) || \
-       defined(PALETTEFX_GRADIENT_ENABLE) || \
+       defined(PALETTEFX_INTERFERENCE_ENABLE) || \
        defined(PALETTEFX_FLOW_ENABLE) || \
        defined(PALETTEFX_RIPPLE_ENABLE) || \
        defined(PALETTEFX_SPARKLE_ENABLE) || \
@@ -101,11 +101,11 @@
  // PaletteFx effects
  ///////////////////////////////////////////////////////////////////////////////
 
- #if defined(PALETTEFX_ENABLE_ALL_EFFECTS) || defined(PALETTEFX_GRADIENT_ENABLE)
- // "Gradient" static effect. This is essentially a palette-colored version of
+ #if defined(PALETTEFX_ENABLE_ALL_EFFECTS) || defined(PALETTEFX_INTERFERENCE_ENABLE)
+ // "Interference" static effect. This is essentially a palette-colored version of
  // RGB_MATRIX_GRADIENT_UP_DOWN. A vertically-sloping gradient is made, with the
  // highest color on the top keys of keyboard and the lowest color at the bottom.
- static bool PALETTEFX_GRADIENT(effect_params_t* params) {
+ static bool PALETTEFX_INTERFERENCE(effect_params_t* params) {
    // On first call, compute and cache the slope of the gradient.
    static uint8_t gradient_slope = 0;
    if (!gradient_slope) {

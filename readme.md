@@ -1,78 +1,73 @@
 # Royal Kludge R65 firmware (Wired ISO version)
 
+[![QMK](https://img.shields.io/badge/QMK-firmware-blue?style=flat-square)](https://docs.qmk.fm/)
+[![VIA](https://img.shields.io/badge/VIA-enabled-ff69b4?style=flat-square)](https://usevia.app/)
+
 ## Overview
 
-The Royal Kludge R65 is a 66-key RGB backlit mechanical keyboard with Chartreuse, Brown, or Blue switches. It offers a gasket structure for a soft typing experience, knob volume adjustment, ergonomic design, hot-swappable keys and QMK support.
+The Royal Kludge R65 is a 66-key RGB backlit mechanical keyboard with hot-swappable switches, gasket mount, and knob volume control. This firmware targets the **wired ISO-layout** version (VID:PID `342d:e480`).
 
 ![r65](extra/r65.png)
 
-Briefly.
-I just acquired this beauty from MercadoLibre.com.ar and sadly noticed RK official site no longer maintain a functional software, since @sdk66's BROKE MY KIBI I remapped both ISO and RGB matrix layout based on recent QMK documentation. 
+I acquired this from MercadoLibre.com.ar and noticed RK's official software is no longer maintained. Based on [@sdk66](https://github.com/sdk66)'s initial firmware, this remaps both the ISO layout and RGB matrix against recent QMK documentation.
 
-This version relates to VID:PID 342d:e480 device, most likely lastest Latinoamerican releases this year AFAIK.
+Special thanks to [@sdk66](https://github.com/sdk66), [@NieblaDev](https://github.com/NieblaDev), and [@iamdanielv](https://github.com/iamdanielv) for the collaboration.
 
-*Major efforts are subject to keycode Deprecation Notices made by QMK as they mention on 11/2024 changelog, and RGB matrix layout fix to respective keys/values. You are always encouraged to visit their [site](https://docs.qmk.fm/) for further customizing. Also you can always use this firmware as a rollback point, as long as it contains stock settings with funtional knob, state leds, Mac layout and all 43 defined RGB animations working properly.*
+> **Important**
+> This branch is for the **wired ISO** version only.
+> Do **not** flash on wireless models or if unsure.
 
-Special thanks to @sdk66 for sharing the initial firmware files, @NieblaDev and @iamdanielv colaboration for fixing a major portion of the code. @qmk of course!
+---
 
-### > Changelog
+## Quick start
 
-- **Boot animation**: Rainbow sweep on startup.
-- **PaletteFx effect**: Renamed "Gradient" to "Interference".
+### Setting up
 
-> [IMPORTANT] 
-> This branch only contains files for the **wired ISO-layout** version of the Royal Kludge R65.
-> **DO NOT** flash this firmware if your keyboard has wireless capabilities.
-> **DO NOT** flash this firmware if you're unsure of what you're doing.
+```bash
+qmk setup
+```
 
-### > Setting Up Environment
+Place the `rk/r65` folder into `qmk_firmware/keyboards/`.
 
-1. **Install QMK MSYS**  
-   Download and install [QMK MSYS](https://msys.qmk.fm).
+### Compile
 
-2. **Configure QMK MSYS**  
-   Open QMK MSYS and run the command:  
-   ```bash
-   qmk setup
-   ```
-   It may ask for confirmation and take a few minutes depending on network.
-   A folder will be installed at `C:/Users/%USERNAME%/qmk_firmware`.
+```bash
+qmk compile -j 0 -kb r65 -km iso
+```
 
-3. **Add Keyboard Files**  
-   Download this repository and place the `rk/r65` folder into your `qmk_firmware/keyboards/` folder.
+> `-j 0` enables parallel compilation threads.
 
-### > Compiling Firmware
+### Flash
 
-1. **Compile the Firmware**  
-   Run the following command in QMK MSYS:  
-   ```bash
-   qmk compile -j 0 -kb r65 -km iso
-   ```
-   *Note ```-j 0``` speeds up the job by enabling parallel threads.
-   
-2. **Locate the Firmware File**  
-   Find the compiled `.bin` file in the root of the `qmk_firmware` folder.
+1. Open [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) as Admin.
+2. Load the compiled `.bin` file.
+3. Enter bootloader mode (see below).
+4. Click **Flash**, then **Exit DFU**.
 
-### > Flashing Firmware
+### Enter bootloader mode
 
-1. **Install QMK Toolbox**  
-   Download and install [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases), portable EXE available.
+| Option | Method |
+|--------|--------|
+| **Preferred** | Press `Fn+Shift+Esc` |
+| Reset switch | Hold the reset switch under the space bar while plugging in |
+| Escape key | Hold `Esc` while plugging in (clears settings) |
 
-2. **Load the Firmware File**  
-   Open QMK Toolbox as Admin and load the `.bin` file.
+---
 
-3. **Enter Bootloader Mode**  
-   Reset the keyboard into bootloader mode. (Procedure below)
+## Features
 
-4. **Flash the Firmware**  
-   Click 'Flash', then 'Exit DFU' once the flashing process is complete.
+- **Boot animation** — Rainbow sweep on startup.
+- **VIA support** — Real-time keymapping via [usevia.app](https://usevia.app/).
+- **43 RGB animations** — All built-in QMK effects + PaletteFx suite.
+- **PaletteFx** — 16 palettes, 6 effects (Gradient renamed to Interference).
+- **Mac layout** — Automatic Mac/Windows layer switching with status LED.
+- **Knob** — Volume control with factory encoder map.
+- **QMK bootloader** — `Fn+Shift+Esc` to enter flash mode.
 
-### > Entering Bootloader/DFU Mode
+> RGB matrix and keymap are adapted for QMK's 11/2024 keycode deprecation changes. Always check [QMK docs](https://docs.qmk.fm/) for the latest.
 
-- **Option 1**: Hold the Reset switch under space bar (find and find out) while connecting the USB cable.
-- **Option 2**: Hold the Escape key while connecting the USB cable (this will also erase settings).
-- **Option 3**: Press `Fn+Shift+Esc`. (Preferred)
+---
 
-## Known Issues
+## Known issues
 
-You tell me
+None yet. [Open an issue](../../issues) if you find one.

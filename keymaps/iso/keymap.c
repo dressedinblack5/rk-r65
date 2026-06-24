@@ -8,23 +8,21 @@
 #include QMK_KEYBOARD_H
 
 enum layer_names {
-  _BASE,    // 0
-  _BASE_FN, // 1
-  _MAC,     // 2
-  _MAC_FN,  // 3
-  _BOOT,    // 4
+    _BASE,    // 0
+    _BASE_FN, // 1
+    _MAC,     // 2
+    _MAC_FN,  // 3
+    _BOOT,    // 4
 
 };
 
 void housekeeping_task_user(void) {
-  if (IS_LAYER_ON(_MAC) || IS_LAYER_ON(_MAC_FN)) {
-    gpio_write_pin_low(LED_MAC_PIN);
-  } else {
-    gpio_write_pin_high(LED_MAC_PIN);
-  }
+    if (IS_LAYER_ON(_MAC) || IS_LAYER_ON(_MAC_FN)) {
+        gpio_write_pin_low(LED_MAC_PIN);
+    } else {
+        gpio_write_pin_high(LED_MAC_PIN);
+    }
 }
-
-bool recalculate_rgb = true;
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -102,6 +100,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // '-----------+-----------+-----------+-----------------------------------------------------------------------+-----------+-----------+-----------+-----------+-----------+-----------'
         )
 };
+
+// clang-format on
 
 #ifdef ENCODER_MAP_ENABLE
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
